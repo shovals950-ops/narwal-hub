@@ -1,4 +1,4 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Narwal Hub V109 Cloud Image Toast Fix</title>
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Narwal Hub V110 Real Cloud Sync</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#070716;color:#fff;font-family:Arial,sans-serif;direction:rtl}body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 8%,#7c3aed33,transparent 45%);z-index:-1}a{color:#a855f7}.top{position:sticky;top:0;z-index:100;background:rgba(7,7,22,.96);border-bottom:1px solid #252542}.head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}.logo{font-weight:900;letter-spacing:4px;font-size:22px}.logo span{color:#a855f7}.nav{display:flex;gap:8px;overflow-x:auto;padding:0 14px 12px;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav button,.nav a{flex:0 0 auto;border:0;background:transparent;color:#aaa6c8;border-radius:14px;padding:10px 14px;font-weight:800;text-decoration:none}.nav button.active{background:#15152f;color:#fff}.page{max-width:1120px;margin:auto;padding:24px 16px 100px}.back{border:1px solid #a855f7;background:#101025;color:#fff;border-radius:999px;padding:10px 14px;font-weight:900}h1{font-size:52px;margin:10px 0}h1 span{color:#a855f7}h2{font-size:34px;margin:12px 0 18px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;text-align:center}.robotArt{height:280px;border-radius:28px;background:radial-gradient(circle,#7c3aed55,transparent 60%),#0b0b1d;border:1px solid #28284a;position:relative;overflow:hidden}.robotArt:before{content:"";position:absolute;right:50%;top:55px;transform:translateX(50%);width:125px;height:160px;border-radius:28px;background:linear-gradient(135deg,#fff,#b8c0cf,#111827)}.robotArt:after{content:"";position:absolute;right:50%;bottom:55px;transform:translateX(50%);width:205px;height:62px;border-radius:44px;background:linear-gradient(#fff,#9aa3b5,#111827)}input,textarea,select{width:100%;background:#0b0b1d;color:#fff;border:1px solid #29294b;border-radius:14px;padding:13px;font-family:inherit;margin:6px 0}textarea{min-height:100px}.btn{border:0;background:#7c3aed;color:#fff;border-radius:13px;padding:11px 15px;font-weight:900}.btn.alt{background:#232342}.btn.red{background:#7f1d1d}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}.card{background:linear-gradient(180deg,#12122c,#0d0d20);border:1px solid #29294b;border-radius:22px;padding:18px;box-shadow:0 16px 50px #0005}.card p{color:#aaa6c8;line-height:1.65}.filters{display:flex;gap:8px;overflow:auto;padding:8px 0 14px}.filters button{border:1px solid #29294b;background:#101025;color:#d8b4fe;border-radius:999px;padding:9px 13px}.faq{background:#101025;border:1px solid #29294b;border-radius:18px;margin:10px 0;overflow:hidden}.q{padding:15px;font-weight:900;cursor:pointer}.a{display:none;padding:0 15px 15px;color:#aaa6c8;line-height:1.7}.faq.open .a{display:block}.modelImg{height:165px;border-radius:18px;margin-bottom:12px;position:relative;overflow:hidden;background:radial-gradient(circle,#7c3aed55,transparent 65%),#09091a;border:1px solid #2b3157}.modelImg:before{content:"";position:absolute;right:50%;top:22px;transform:translateX(50%);width:94px;height:110px;border-radius:24px;background:linear-gradient(135deg,#fff,#cbd5e1,#111827)}.modelImg:after{content:"";position:absolute;right:50%;bottom:22px;transform:translateX(50%);width:142px;height:44px;border-radius:34px;background:linear-gradient(#fff,#94a3b8,#111827)}.tableWrap{overflow:auto}table{width:100%;border-collapse:separate;border-spacing:0 8px}td,th{background:#101025;border:1px solid #29294b;padding:11px;min-width:120px}td{color:#aaa6c8}.bottom{position:fixed;bottom:0;left:0;right:0;background:#09091a;border-top:1px solid #29294b;display:flex;justify-content:space-around;padding:8px;z-index:100}.bottom button{background:0;border:0;color:#aaa6c8;font-size:12px;flex:1}.bottom span{display:block;font-size:22px;color:#fff}.wa{display:block;background:#16a34a;color:#fff;text-decoration:none;border-radius:14px;padding:14px;margin:9px 0;text-align:center;font-weight:900}.call{display:block;background:#2563eb;color:#fff;text-decoration:none;border-radius:14px;padding:14px;margin:9px 0;text-align:center;font-weight:900}.status{background:#101025;border:1px solid #29294b;border-radius:18px;padding:14px;color:#aaa6c8;margin:10px 0}@media(max-width:760px){.hero{grid-template-columns:1fr}.robotArt{order:-1;height:230px}h1{font-size:40px}}
 </style>
@@ -4730,6 +4730,216 @@ body:not(.admin-mode) .v105AdminOnly{display:none!important}
   }
 
   setTimeout(setBadge,250);
+})();
+</script>
+
+
+<style id="v110-real-cloud-css">
+#v109Badge{display:none!important}
+#v110Badge{
+  display:inline-block;background:#14532d;color:#bbf7d0;border:1px solid #22c55e66;
+  border-radius:999px;padding:5px 10px;font-size:12px;margin-inline-start:8px;
+  letter-spacing:2px;font-weight:900;
+}
+.v110CloudStatus{
+  background:#101025;border:1px solid #29294b;color:#c4b5fd;
+  border-radius:16px;padding:12px;margin:10px 0;text-align:center;font-weight:900;
+}
+.v110Toast{
+  position:fixed;top:86px;right:16px;left:16px;max-width:520px;margin:auto;z-index:999999;
+  background:#14532d;color:#bbf7d0;border:1px solid #22c55e66;border-radius:16px;
+  padding:13px 16px;box-shadow:0 12px 40px #0008;text-align:center;font-weight:900;
+}
+</style>
+
+<script id="v110-real-cloud-js">
+(function(){
+  if(window.__V110_REAL_CLOUD__) return;
+  window.__V110_REAL_CLOUD__ = true;
+
+  const CLOUD_PATH = "narwalHubLive";
+  let cloudReady = false;
+  let cloudDb = null;
+  let cloudLoaded = false;
+
+  function toast(msg){
+    document.querySelectorAll(".v110Toast,.v109Toast,.toast,.toastWrap").forEach(x=>x.remove());
+    const t=document.createElement("div");
+    t.className="v110Toast";
+    t.textContent=msg;
+    document.body.appendChild(t);
+    setTimeout(()=>t.remove(),2300);
+  }
+
+  function setBadge(){
+    document.querySelectorAll("#v110Badge,#v109Badge,#v108Badge,#v107Badge").forEach(x=>x.remove());
+    const logo=document.querySelector(".logo");
+    if(logo && !document.getElementById("v110Badge")){
+      const b=document.createElement("span");
+      b.id="v110Badge";
+      b.textContent="V110";
+      logo.appendChild(b);
+    }
+  }
+
+  function normalizeVideos(arr){
+    return (Array.isArray(arr)?arr:[]).map(v=>{
+      if(Array.isArray(v)) return [v[0]||"סרטון", v[1]||""];
+      return [v.title||"סרטון", v.url||""];
+    }).filter(v=>v[1]);
+  }
+
+  function isAdmin(){
+    return localStorage.getItem("nh_v105_admin")==="1" || localStorage.getItem("nh_admin")==="1";
+  }
+
+  function initFirebase(){
+    try{
+      if(window.firebase && firebase.database){
+        cloudDb = firebase.database();
+        cloudReady = true;
+        return true;
+      }
+    }catch(e){}
+    return false;
+  }
+
+  function getLocalVideos(){
+    try{
+      const v = JSON.parse(localStorage.getItem("nh_v110_videos") || "null");
+      if(Array.isArray(v)) return normalizeVideos(v);
+    }catch(e){}
+    try{
+      const v = JSON.parse(localStorage.getItem("nh_v109_videos") || "null");
+      if(Array.isArray(v)) return normalizeVideos(v);
+    }catch(e){}
+    return normalizeVideos((window.DATA && DATA.videos) ? DATA.videos : []);
+  }
+
+  function saveLocalVideos(arr){
+    const clean = normalizeVideos(arr);
+    localStorage.setItem("nh_v110_videos", JSON.stringify(clean));
+    localStorage.setItem("nh_v109_videos", JSON.stringify(clean));
+    localStorage.setItem("cms_videos", JSON.stringify(clean));
+    if(window.DATA) DATA.videos = clean;
+  }
+
+  function listenVideos(){
+    if(!initFirebase()) return false;
+    try{
+      cloudDb.ref(CLOUD_PATH + "/videos").on("value", snap=>{
+        const val = snap.val();
+        if(Array.isArray(val)){
+          cloudLoaded = true;
+          saveLocalVideos(val);
+          if(window.state && state.page==="videos" && window.V75Video) V75Video.render();
+        }
+      });
+      return true;
+    }catch(e){
+      console.log("cloud listen failed", e);
+      return false;
+    }
+  }
+
+  function cloudSaveVideos(arr){
+    const clean = normalizeVideos(arr);
+    saveLocalVideos(clean);
+    if(!initFirebase()){
+      toast("ענן לא מחובר — נשמר רק במכשיר הזה");
+      return false;
+    }
+    try{
+      cloudDb.ref(CLOUD_PATH + "/videos").set(clean).then(()=>{
+        toast("הסרטון נשמר בענן");
+      }).catch(()=>{
+        toast("שמירה לענן נכשלה — נשמר רק במכשיר הזה");
+      });
+      return true;
+    }catch(e){
+      toast("שמירה לענן נכשלה — נשמר רק במכשיר הזה");
+      return false;
+    }
+  }
+
+  function statusHtml(){
+    if(initFirebase()) return `<div class="v110CloudStatus">☁️ ענן מחובר — שינויים יופיעו בכל המכשירים</div>`;
+    return `<div class="v110CloudStatus">⚠️ ענן לא מחובר — שינויים נשמרים רק במכשיר הזה</div>`;
+  }
+
+  window.V75Video = {
+    render(){
+      const app = window.app || document.getElementById("app");
+      if(!app) return;
+      if(window.state) state.page = "videos";
+      const videos = getLocalVideos();
+      app.innerHTML = `<section class="page"><h2>סרטונים</h2>
+        ${statusHtml()}
+        ${isAdmin()?`<div class="card"><button class="btn" onclick="V75Video.add()">➕ הוסף סרטון</button></div>`:""}
+        <div class="cards">${videos.map((v,i)=>`
+          <div class="card">
+            <h3>🎥 ${v[0] || "סרטון"}</h3>
+            <p style="word-break:break-all">${v[1] || ""}</p>
+            <div class="v109Actions">
+              <button class="btn alt" onclick="V75Video.open('${String(v[1]||"").replace(/'/g,"\\'")}')">פתח</button>
+              ${isAdmin()?`<button class="btn alt" onclick="V75Video.edit(${i})">✏️ ערוך</button><button class="btn red" onclick="V75Video.del(${i})">🗑️ מחק</button>`:""}
+            </div>
+          </div>`).join("")}</div></section>`;
+      setBadge();
+    },
+    add(){
+      if(!isAdmin()) return alert("רק מנהל יכול להוסיף סרטון");
+      const title = prompt("שם הסרטון:");
+      if(!title) return;
+      const url = prompt("קישור YouTube:");
+      if(!url) return;
+      if(!/^https?:\/\//i.test(url)) return alert("צריך קישור שמתחיל ב-http או https");
+      const arr = getLocalVideos();
+      arr.unshift([title, url]);
+      cloudSaveVideos(arr);
+      V75Video.render();
+    },
+    edit(i){
+      if(!isAdmin()) return alert("רק מנהל יכול לערוך");
+      const arr = getLocalVideos();
+      const title = prompt("שם הסרטון:", arr[i]?.[0] || "");
+      if(!title) return;
+      const url = prompt("קישור:", arr[i]?.[1] || "");
+      if(!url) return;
+      arr[i]=[title,url];
+      cloudSaveVideos(arr);
+      V75Video.render();
+    },
+    del(i){
+      if(!isAdmin()) return alert("רק מנהל יכול למחוק");
+      if(!confirm("למחוק סרטון?")) return;
+      const arr=getLocalVideos();
+      arr.splice(i,1);
+      cloudSaveVideos(arr);
+      V75Video.render();
+    },
+    open(url){
+      if(!url || !/^https?:\/\//i.test(url)) return alert("קישור לא תקין");
+      window.open(url,"_blank","noopener,noreferrer");
+    }
+  };
+
+  const oldShow = window.App && App.show;
+  if(window.App && oldShow){
+    App.show = function(p){
+      if(p==="videos"){
+        if(window.state){ if(state.page!==p) state.history.push(state.page); state.page=p; }
+        V75Video.render(); scrollTo(0,0); return;
+      }
+      return oldShow.apply(this, arguments);
+    };
+  }
+
+  listenVideos();
+  setTimeout(()=>{
+    setBadge();
+    if(!cloudReady) console.log("Firebase cloud is not connected");
+  },300);
 })();
 </script>
 
